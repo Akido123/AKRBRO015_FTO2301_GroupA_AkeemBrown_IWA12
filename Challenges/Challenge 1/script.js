@@ -46,18 +46,18 @@ const checkin3 = document.querySelector("#book3 .checkin")
 
 checkin1.style.color = null
 status1.style.color = STATUS_MAP.overdue.color
-reserve1.innerHTML = STATUS_MAP.overdue.canReserver ? 'enabled' : 'disabled'
-checkout1.innerHTML = STATUS_MAP.overdue.canCheckout ? 'enabled' : 'disabled'
-checkin1.innerHTML = STATUS_MAP.overdue.canCheckIn ? 'enabled' : 'disabled'
+reserve1.disabled = !STATUS_MAP.overdue.canReserve
+checkout1.disabled = !STATUS_MAP.overdue.canCheckout 
+checkin1.disabled = !STATUS_MAP.overdue.canCheckIn
 
 checkin2.style.color = null
 status2.style.color = STATUS_MAP.reserved.color
-reserve2.innerHTML = STATUS_MAP.reserved.canReserver ? 'enabled' : 'disabled'
-checkout2.innerHTML = STATUS_MAP.reserved.canCheckout ? 'enabled' : 'disabled'
-checkin2.innerHTML = STATUS_MAP.reserved.canCheckIn ? 'enabled' : 'disabled'
+reserve2.disabled = !STATUS_MAP.reserved.canReserve
+checkout2.disabled = !STATUS_MAP.reserved.canCheckout
+checkin2.disabled = !STATUS_MAP.reserved.canCheckIn 
 
 checkin3.style.color = null
 status3.style.color = STATUS_MAP.shelf.color
-reserve3.innerHTML = STATUS_MAP.shelf.canReserver ? 'enabled' : 'disabled'
-checkout3.innerHTML = STATUS_MAP.shelf.canCheckout ? 'enabled' : 'disabled'
-checkin3.innerHTML = STATUS_MAP.shelf.canCheckIn ? 'enabled' : 'disabled'
+reserve3.disabled = !STATUS_MAP.shelf.canReserve
+checkout3.disabled = !STATUS_MAP.shelf.canCheckout 
+checkin3.disabled = !STATUS_MAP.shelf.canCheckIn
